@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Register - Brand</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=d3f7704f27950e30f79f7693f94faa7c">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/styles.min.css?h=a854b57ef9592cf677f3407274b69b24">
+
+  <style>
+    #room_owner_form,
+    #student_form {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-primary">
+  <div class="container" style="width: 100%;">
+    <div class="card shadow-lg o-hidden border-0 my-5">
+      <div class="card-body p-0">
+        <div class="row justify-content-center">
+          <div class="col-lg-7" style="width: 660.656px;">
+            <div class="p-5">
+              <div class="text-center">
+                <h4 class="text-dark mb-4"><strong>Register and Create an Account</strong></h4>
+              </div>
+              
+              <p class="text-center text-muted" style="margin-top: 15px;">Who you are ?&nbsp;<br>Student or Room Owner
+              </p>
+              <div class="row justify-content-center align-items-center">
+                <div class="col-4">
+                  <button onclick="showStudentForm()" class="btn btn-primary" data-bs-toggle="tooltip"
+                    data-bss-tooltip="" type="button" style="width: 62px;height: 50px;margin: 8px;" title="Student"><svg
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em"
+                      fill="currentColor"
+                      style="font-size: 48px;width: 41px;height: 33px;"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                      <path
+                        d="M45.63 79.75L52 81.25v58.5C45 143.9 40 151.3 40 160c0 8.375 4.625 15.38 11.12 19.75L35.5 242C33.75 248.9 37.63 256 43.13 256h41.75c5.5 0 9.375-7.125 7.625-13.1L76.88 179.8C83.38 175.4 88 168.4 88 160c0-8.75-5-16.12-12-20.25V87.13L128 99.63l.001 60.37c0 70.75 57.25 128 128 128s127.1-57.25 127.1-128L384 99.62l82.25-19.87c18.25-4.375 18.25-27 0-31.5l-190.4-46c-13-3-26.62-3-39.63 0l-190.6 46C27.5 52.63 27.5 75.38 45.63 79.75zM359.2 312.8l-103.2 103.2l-103.2-103.2c-69.93 22.3-120.8 87.2-120.8 164.5C32 496.5 47.53 512 66.67 512h378.7C464.5 512 480 496.5 480 477.3C480 400 429.1 335.1 359.2 312.8z">
+                      </path>
+                    </svg>
+                  </button>
+                  <button onclick="showRoomOwnerForm()" class="btn btn-primary" data-bs-toggle="tooltip"
+                    data-bss-tooltip="" type="button" style="width: 62px;height: 50px;margin: 8px;"
+                    title="Room Owner"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                      fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-fill"
+                      style="font-size: 50px;width: 41px;height: 33px;">
+                      <path fill-rule="evenodd"
+                        d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z">
+                      </path>
+                      <path fill-rule="evenodd"
+                        d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div id="room_owner_form">
+                <form class="user" action="owner_register.php" method="POST">
+                  <div class="row mb-3">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <input class="form-control form-control-user" type="text" placeholder="First Name" required pattern="[A-Za-z\s]+" title="Please enter only letters"
+                        name="owner_fname">
+                    </div>
+                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" required pattern="[A-Za-z\s]+" title="Please enter only letters"
+                        placeholder="Last Name" name="owner_lname">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <input class="form-control form-control-user" type="text" placeholder="Phone Number" required pattern="\d{10}" title="Please enter a 10-digit contact number"
+                        name="owner_phno">
+                    </div>
+                    <div class="col-sm-6">
+                      <input class="form-control form-control-user" type="text" placeholder="Email"  required name="owner_email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                      title="Please enter a valid email address">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <input class="form-control form-control-user" type="text" placeholder="Username" required pattern="^[a-zA-Z0-9_]{3,10}$"
+                      title="Username must be 3-10 characters long and can contain letters, numbers, and underscores only"
+                        name="owner_username">
+                    </div>
+                    <div class="col-sm-6">
+                      <input class="form-control form-control-user" type="password" placeholder="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{4,}$"
+                      title="Password must be at least 4 characters long, contain at least one uppercase letter, one lowercase letter, and one special character"
+                        name="owner_password">
+                    </div>
+                  </div>
+                  <button class="btn btn-primary d-block btn-user w-100" type="submit"
+                    name="owner_register">Register</button>
+                </form>
+              </div>
+
+              <div id="student_form" style="margin-top: 20px;">
+                <form class="user" action="stud_register.php" method="POST">
+                  <div class="row mb-3">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <input class="form-control form-control-user" type="text" placeholder="First Name" required pattern="[A-Za-z\s]+" title="Please enter only letters"
+                        name="stud_fname">
+                    </div>
+                    <div class="col-sm-6">
+                      <input class="form-control form-control-user" type="text" placeholder="Last Name" required pattern="[A-Za-z\s]+" title="Please enter only letters"
+                        name="stud_lname">
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="" style="display: flex; flex-wrap: wrap;">
+                      <label for="" style="margin-right: 10px;">Select Gender : </label>
+                      <div class="form-check" style="margin-right: 10px;">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+                        <label class="form-check-label" for="male">Male</label>
+                      </div>
+                      <div class="form-check" style="margin-right: 10px;">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required>
+                        <label class="form-check-label" for="female">Female</label>
+                      </div>
+                      <div class="form-check" style="margin-right: 10px;">
+                        <input class="form-check-input" type="radio" name="gender" id="other" value="Other" required>
+                        <label class="form-check-label" for="other">Other</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <input class="form-control form-control-user" type="text" placeholder="Phone Number" required pattern="\d{10}" title="Please enter a 10-digit contact number"
+                        name="stud_phno">
+                    </div>
+                    <div class="col-sm-6">
+                      <input class="form-control form-control-user" type="text" placeholder="Email" name="stud_email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                      title="Please enter a valid email address" required >
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <input class="form-control form-control-user" type="text" placeholder="Username" required pattern="^[a-zA-Z0-9_]{3,20}$"
+                      title="Username must be 3-20 characters long and can contain letters, numbers, and underscores only"
+                        name="stud_username">
+                    </div>
+                    <div class="col-sm-6">
+                      <input class="form-control form-control-user" type="password" placeholder="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{4,}$"
+                      title="Password must be at least 4 characters long, contain at least one uppercase letter, one lowercase letter, and one special character"
+                        name="stud_password">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <input class="form-control form-control-user" type="text" placeholder="Guardian Name" required pattern="[A-Za-z\s]+" title="Please enter only letters"
+                        name="stud_gd_name">
+                    </div>
+                    <div class="col-sm-6">
+                      <input class="form-control form-control-user" type="text" placeholder="Guardian Contact No." required pattern="\d{10}" title="Please enter a 10-digit contact number"
+                        name="stud_gd_phno">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <input class="form-control form-control-user" type="text" placeholder="Current Educational Status" required pattern="[A-Za-z0-9\s]+" title="Please enter only letters and numbers"
+                        name="stud_edu_bg">
+                    </div>
+                    <div class="col-sm-6">
+                      <input class="form-control form-control-user" type="text" placeholder="College / School Name" required pattern="[A-Za-z0-9\s]+" title="Please enter only letters and numbers"
+                        name="stud_college_name">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <input class="form-control form-control-user" type="text" placeholder="Home Town" required pattern="[A-Za-z\s]+" title="Please enter only letters"
+                      name="stud_home_town">
+                  </div>
+                  <button class="btn btn-primary d-block btn-user w-100" type="submit"
+                    name="stud_register">Register</button>
+                </form>
+              </div>
+
+              <div class="text-center">
+                <p>Already have an account?&nbsp;&nbsp;<a class="small" href="login.html">Login</a></p>
+              </div>
+
+              <script>
+                var studentForm = document.getElementById("student_form");
+                var roomOwnerForm = document.getElementById("room_owner_form");
+
+                function showRoomOwnerForm() {
+                  roomOwnerForm.style.display = "block";
+                  studentForm.style.display = "none";
+                }
+                function showStudentForm() {
+                  roomOwnerForm.style.display = "none";
+                  studentForm.style.display = "block";
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.min.js?h=e2d48538e86d2e7e5bae0de2d5caf630"></script>
+</body>
+
+</html>
