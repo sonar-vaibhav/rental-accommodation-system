@@ -7,7 +7,7 @@
 ![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563d7c?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-> 📂 [**View Full Documentation** (Artifact PDF)](https://www.linkedin.com/feed/update/urn:li:activity:7220400033416822785/) 
+> 📂 [**View Full Documentation** (Artifact PDF)](https://www.linkedin.com/feed/update/urn:li:activity:7220400033416822785/) <br>
 > 📌 *Built as an academic full-stack project to simplify student accommodation search.*
 
 ---
